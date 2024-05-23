@@ -452,8 +452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701b0219a29a5ae42818e192fe6969e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpsCam: {fileID: 963194227}
+  PlayerCamera: {fileID: 963194227}
   attackPoint: {fileID: 718909880}
+  pushForce: 50
   bullet: {fileID: 3961653651463796618, guid: 70ec7dd852777dd46a46bf3de4335d7d, type: 3}
 --- !u!1 &550263569
 GameObject:
