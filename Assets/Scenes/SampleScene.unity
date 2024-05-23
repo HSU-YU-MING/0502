@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 381917901}
   - component: {fileID: 381917900}
   - component: {fileID: 381917903}
+  - component: {fileID: 381917904}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -439,6 +440,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   grounded: 0
+--- !u!114 &381917904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381917899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701b0219a29a5ae42818e192fe6969e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCam: {fileID: 963194227}
+  attackPoint: {fileID: 718909880}
+  bullet: {fileID: 3961653651463796618, guid: 70ec7dd852777dd46a46bf3de4335d7d, type: 3}
 --- !u!1 &550263569
 GameObject:
   m_ObjectHideFlags: 0
