@@ -49,6 +49,7 @@ public class Shooting : MonoBehaviour
             if (bulletsLeft > 0 && !reloading)
             {
                 Shoot();
+                animatorObject.SetTrigger("Fire");
             }
         }
 
@@ -88,7 +89,7 @@ public class Shooting : MonoBehaviour
 
         ShowAmmoDisplay();                 // 更新彈量顯示
 
-        animatorObject.SetTrigger("Fire");  // 觸發「Fire」的觸發變數
+          // 觸發「Fire」的觸發變數
     }
 
     // 方法：換彈夾的延遲時間設定

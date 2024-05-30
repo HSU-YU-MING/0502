@@ -477,7 +477,7 @@ MonoBehaviour:
   PlayerCamera: {fileID: 963194227}
   attackPoint: {fileID: 718909880}
   bullet: {fileID: 3961653651463796618, guid: 70ec7dd852777dd46a46bf3de4335d7d, type: 3}
-  magazineSize: 29
+  magazineSize: 10
   bulletsLeft: 0
   reloadTime: 3
   recoilForce: 3
