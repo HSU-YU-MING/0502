@@ -201,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154441945}
   - component: {fileID: 154441946}
+  - component: {fileID: 154441947}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -245,6 +246,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &154441947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154441944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f93e9c6e8989b047bd6ce42b2d5052f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCam: {fileID: 963194227}
+  FirePos: {fileID: 718909880}
+  PlayerRB: {fileID: 381917901}
+  bullet: {fileID: 3961653651463796618, guid: 70ec7dd852777dd46a46bf3de4335d7d, type: 3}
+  isGun: 1
+  magazineSize: 15
+  bulletsLeft: 15
+  reloadTime: 1
+  recoilForce: 1
+  nextFireTime: 0.2
+  ammunitionDisplay: {fileID: 920671800}
+  reloadingDisplay: {fileID: 1272184338}
 --- !u!1 &171531099
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +389,7 @@ GameObject:
   - component: {fileID: 381917900}
   - component: {fileID: 381917903}
   - component: {fileID: 381917904}
+  - component: {fileID: 381917905}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -469,7 +495,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381917899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 701b0219a29a5ae42818e192fe6969e1, type: 3}
   m_Name: 
@@ -484,6 +510,21 @@ MonoBehaviour:
   ammunitionDisplay: {fileID: 920671800}
   reloadingDisplay: {fileID: 1272184338}
   animatorObject: {fileID: 154441946}
+--- !u!114 &381917905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381917899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d826ec27943d87648a13be922be09fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponObjects:
+  - {fileID: 4607579723870446596}
+  - {fileID: 154441944}
 --- !u!1 &550263569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,13 +1663,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4607579723870446596}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 963194228}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &4607579723870446596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1683,7 @@ GameObject:
   - component: {fileID: 2662072858032244177}
   - component: {fileID: 4607579723870446598}
   - component: {fileID: 4607579723870446597}
+  - component: {fileID: 4607579723870446599}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -1656,13 +1698,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4607579723870446596}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e3368170d966f479682a348389aa25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObejct: {fileID: 0}
-  PlayerCamera: {fileID: 0}
+  PlayerObejct: {fileID: 1908375759}
+  PlayerCamera: {fileID: 963194227}
   attackPoint: {fileID: 0}
   bullet: {fileID: 0}
   isGun: 0
@@ -1693,6 +1735,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4607579723870446599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607579723870446596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f93e9c6e8989b047bd6ce42b2d5052f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCam: {fileID: 963194227}
+  FirePos: {fileID: 0}
+  PlayerRB: {fileID: 381917901}
+  bullet: {fileID: 0}
+  isGun: 0
+  magazineSize: 0
+  bulletsLeft: 0
+  reloadTime: 0
+  recoilForce: 0
+  nextFireTime: 0.1
+  ammunitionDisplay: {fileID: 0}
+  reloadingDisplay: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

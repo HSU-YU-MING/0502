@@ -54,24 +54,22 @@ public class WeaponSystem : MonoBehaviour
     // 方法：偵測玩家操作狀態
     private void MyInput()
     {
+        
         // 判斷：有沒有按下左鍵？
         if (Input.GetMouseButton(0))
         {
+            if (isGun != true && fireTime <= 0)
+            {
+                animator.SetTrigger("Fire");
+                fireTime = nextFireTime; // 重置fireTime
+            }
             // 如果還有子彈，並且沒有正在重裝子彈，就可以射擊
             if (isGun && bulletsLeft > 0 && !reloading)
             {
                 if (fireTime <= 0)
                 {
-                    animator.SetTrigger("Attack");
+                    animator.SetTrigger("Fire");
                     Shoot();
-                    fireTime = nextFireTime; // 重置fireTime
-                }
-            }
-            if (isGun != true)
-            {
-                if (fireTime <= 0)
-                {
-                    animator.SetTrigger("Attack");
                     fireTime = nextFireTime; // 重置fireTime
                 }
             }
